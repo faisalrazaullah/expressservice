@@ -173,6 +173,25 @@ if (
        */
       let _destination = { lat: lat, lng: lon };
       let _pickup = JSON.parse(localStorage.getItem("pickup"));
+      
+
+      require('dotenv').config();
+const express = require('express');
+const app = express();
+
+// Serve static files
+app.use(express.static('public'));
+
+// Endpoint to serve the API key
+app.get('/api/key', (req, res) => {
+  res.json({ key: process.env.GOOGLE_API_KEY });
+});
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
+
 
       /**
        * @description: join the pickup and dropoff locations
@@ -183,6 +202,8 @@ if (
         place.geometry.location.lat(),
         place.geometry.location.lng()
       );
+
+     
 
       /**
        * @description: for us to get distance, we need to create a google maps api service object(Directions request)
