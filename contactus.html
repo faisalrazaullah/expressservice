@@ -1,0 +1,383 @@
+<!DOCTYPE html><html lang="en-GB"><head>
+    <title>Contact</title>
+    <meta name="description" content="24/7 Taxi service available">
+    <meta name="keywords" content="Taxis, Airport Taxis, Airport Transfers, Gatwick, Heathrow, stansted, luton london city">
+    <link rel="canonical" href="index.html">
+    <meta name="google-site-verification" content="_sGsw9_VqfblMWtsCoThjiSTZPsCnQPJzR7t4FwLIKE"> <meta property="og:url" content="index.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Express Service">
+    <meta property="og:description" content="Tunbridge Wells best Taxi service 24 hours. Book your taxi online. Affordable local airport taxis, Executive luxury clean cars">
+    <meta property="og:image" content="images/car-drive.jpg"> <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="420">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="images/android-chrome-192x192.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pnotify.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap">
+    <!--[if lt IE 10]>
+        <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <script src="https://www.taxi-line.com/assets/js/jquery.min.js"></script>
+        <script src="https://www.taxi-line.com/assets/js/jquery.placeholder.js"></script>
+    <![endif]-->
+    <script>
+        const constraints = {
+            name: {
+                presence: { allowEmpty: false }
+            },
+            email: {
+                presence: { allowEmpty: false },
+                email: true
+            },
+            message: {
+                presence: { allowEmpty: false }
+            }
+        };
+     
+        const form = document.getElementById('contact-form');
+     
+        form.addEventListener('submit', function (event) {
+          const formValues = {
+              name: form.elements.name.value,
+              email: form.elements.email.value,
+              message: form.elements.message.value
+          };
+     
+          const errors = validate(formValues, constraints);
+     
+          if (errors) {
+            event.preventDefault();
+            const errorMessage = Object
+                .values(errors)
+                .map(function (fieldValues) { return fieldValues.join(', ')})
+                .join("\n");
+     
+            alert(errorMessage);
+          }
+        }, false);
+     </script>
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-177021614-1" type="4a512f9c9e521650ddf30ddd-text/javascript"></script>
+    <script type="4a512f9c9e521650ddf30ddd-text/javascript">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-177021614-1');
+    </script>
+    <style>
+        .contact{
+            position: relative;
+            min-height: 100vh;
+            padding: 50px 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            /* background: url(./images/pexels-anton-8100-46924.jpg); */ 
+            background-size: cover;
+            
+        }
+        .contact .my-content{
+            max-width: 800px;
+            text-align: center;
+        }
+        .contact .my-content h2{
+            font-size: 36px;
+            font-weight: 500;
+            color: #333;
+        }
+        .contact .my-content p{
+            font-weight: 300;
+            color: #333;
+        }
+        .your-container{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+        .your-container .contactInfo{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+        .your-container .contactInfo .box{
+            position: relative;
+            padding: 20px 0;
+            display: flex;
+        }
+        .your-container .contactInfo .box .icon{
+            min-width: 60px;
+            height: 60px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            font-size: 22px;
+        }
+        .your-container .contactInfo .box .text{
+            display: flex;
+            margin-left: 20px;
+            font-size: 16px;
+            color: #fff;
+            flex-direction: column;
+            font-weight: 300;
+        }
+        .your-container .contactInfo .box .text h3{
+            font-weight: 500;
+            color: #00bcd4
+        }
+        .your-container .contactInfo .box .text p{
+            font-weight: 500;
+            color: #00bcd4
+        }
+        .contactForm{
+            width: 40%;
+            padding: 40px;
+            background: #fff;
+        }
+        .contactForm h2 {
+            font-size: 30px;
+            color: #333;
+            font-weight: 500;
+
+        }
+        .contactForm .inputBox{
+            position: relative;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .contactForm .inputBox input, .contactForm .inputBox textarea{
+            width: 100%;
+            padding: 5px 0;
+            font-size: 16px;
+            margin: 10px 0;
+            border: none;
+            border-bottom: 2px solid #333;
+            outline: none;
+            resize: none;
+        }
+        .contactForm .inputBox span{
+            position: absolute;
+            left: 0;
+            padding: 5px 0;
+            font-size: 16px;
+            margin: 10px 0;
+            pointer-events: none;
+            transition: 0.5s;
+            color: #666;
+        }
+        .contactForm .inputBox input:focus ~ span,
+        .contactForm .inputBox input:valid ~ span,
+        .contactForm .inputBox textarea:focus ~ span,
+        .contactForm .inputBox textarea:valid ~ span
+        {
+            color: #e91e63;
+            font-size: 12px;
+            transform: translateY(-20px);
+        }
+        .contactForm .inputBox input[type="submit"]{
+            width: 100px;
+            background: #00bcd4;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            font-size: 18px;
+        }
+        @media (max-width: 991px)
+        {
+            .contact
+            {
+                padding: 50px;
+            }
+            .your-container
+            {
+                flex-direction: column;
+            }
+            .your-container .contactInfo
+            {
+                margin-bottom: 40px;
+            }
+            .your-container .contactInfo,
+            .contactForm
+            {
+                width: 100%;
+            }
+        }
+
+
+    </style>
+    </head>
+    
+    <body>
+        
+    <header>
+    <div class="navbar-top">
+    <div class="container p0">
+    <div class="row">
+    <div class="col-md-5 col-sm-5 col-xs-12">
+    <div class="navbar-social sm-text-center">
+    <ul class="list-inline">
+    <li class="sm-icon wa"><a href="whatsapp://send?text=Hi&amp;phone=+447723610463" target="_blank"><i class="fab fa-whatsapp"></i></a></li><li class="sm-icon facebook"><a href="https://en-gb.facebook.com/pages/category/Taxi-Service/Tunbridge-wells-Taxi-line-388193484881598/" target="_blank"><i class="fab fa-facebook-f"></i></a></li><li class="sm-icon twitter"><a href="https://twitter.com/twellstaxiline" target="_blank"><i class="fab fa-twitter"></i></a></li></ul>
+    </div>
+    </div>
+    <div class="col-md-7 col-sm-7 col-xs-12">
+    <div class="navbar-callus text-right sm-text-center">
+    <ul class="list-inline">
+    <li><a href="tel:+447723610463"><i class="fas fa-phone"></i> +44 7723610463</a></li> <li>
+        <a href=""><i class="fas fa-envelope"> <span class="info-email">info@express-service.com</span> </i></a>
+    <!--<a href="/cdn-cgi/l/email-protection#2b42454d446b5f4a5342064742454e05484446"><i class="fas fa-envelope"></i> <span class="__cf_email__" data-cfemail="bbd2d5ddd4fbcfdac3d296d7d2d5de95d8d4d6">[email�&nbsp;protected]</span></a></li>--> </ul>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <nav class="navbar-full navbar-default mb-0">
+    <div class="container">
+    <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    </button>
+    <a href="index.html" class="ns-nav-logo navbar-brand"><img src="images/image-1890x567.jpg" alt="Express Service" style="max-height:45px;border:0px;max-width:250px"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav navbar-right">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="Services.html">Services</a></li>
+    <li><a href="contactus.html">Contact us</a></li>
+    </ul>
+    </div>
+    </div>
+    </nav>
+    </header>
+    <section class="contact">
+        <div class="my-content">
+            <h2>Contact Us</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, earum.</p>
+        </div>
+        <div class="your-container">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i>
+                    </div>
+                    <div class="text">
+                        <h3>Phone</h3>
+                        <p>+44 7723 610463</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i>
+                    </div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>info@express-service.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contactForm">
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    
+                    <h2>Send Message</h2>
+                    <div class="inputBox">
+                        
+                        <input type="text" required="required" name="name">
+                        <input type="hidden" name="access_key" value="4ed3a563-7605-49e2-96be-45f4de3f3809">
+                        <span>Full Name</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="email" required="required" name="email">
+                        <span>Email</span>
+                    </div>
+                    <div class="inputBox">
+                        <textarea required="required" name="message"></textarea>
+                        <span>Type your Message...</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" required="required" value="Send">
+                    </div>
+                </form>
+            </div>
+        </div>    
+    
+    </section>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+    <script data-cfasync="false" src="js/email-decode.min.js"></script><script src="js/jquery.min.js" type="4a512f9c9e521650ddf30ddd-text/javascript"></script>
+<script src="js/bootstrap.min.js" type="4a512f9c9e521650ddf30ddd-text/javascript"></script>
+<script src="js/combined.js" type="4a512f9c9e521650ddf30ddd-text/javascript"></script>
+<link rel="stylesheet" href="css/autocomplete.css">
+<link rel="stylesheet" href="css/bootstrap-datetimepicker.css">
+<link rel="stylesheet" href="css/pnotify.css">
+<script src="js/moment.min.js" type="4a512f9c9e521650ddf30ddd-text/javascript"></script>
+<script src="js/moment-timezone-with-data.min.js" type="4a512f9c9e521650ddf30ddd-text/javascript"></script>
+<script src="js/bootstrap-datetimepicker.min.js" type="4a512f9c9e521650ddf30ddd-text/javascript"></script>
+<script src="js/parsley.min.js" type="4a512f9c9e521650ddf30ddd-text/javascript"></script>
+<script src="js/pnotify.js" type="4a512f9c9e521650ddf30ddd-text/javascript"></script>
+<script src="js/cabookie_airports.js" type="4a512f9c9e521650ddf30ddd-text/javascript"></script>
+<script src="js/autocomplete.js" type="4a512f9c9e521650ddf30ddd-text/javascript"></script>
+<script type="4a512f9c9e521650ddf30ddd-text/javascript">
+var key = "bVrk4R6QZN";
+var cardPaymentUrl = cabookiePath+"/payment/process.php?k="+key;
+var successUrl = cabookiePath+"/cabookie-confirmation.php?k="+key;
+var SERVICE_COUNTRY = "GB";
+var timezone = 'Europe/London';
+var advanceBookingFilterMinValue = '10';
+var advanceBookingFilterMinType = 'hours'
+var advanceBookingFilterMaxValue = '3';
+var advanceBookingFilterMaxType = 'months';
+var pickUpDateTime = '';
+var journeyHoursRtn = '0';
+var maxAdditionalDropoffs = 4;
+var passengers = '1';
+var childSeats = '0';
+var smallLuggage = '0';
+var largeLuggage = '0';
+var vehicleIDSelected = '';
+var postcodeCity = '';
+var pickUpLat = '';
+var pickUpLng = '';
+var favLocationArr = [];
+var favLocationArrList = Array();
+favLocationArrList =[];
+var favLocationArrValue = [];
+var favLocationArrValueF = [];
+</script>
+<script src="js/cabookie.js" type="4a512f9c9e521650ddf30ddd-text/javascript"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaFOwY1E7FvolLjDB5eKXCcNUNJM5R87w&amp;libraries=places&amp;callback=init" async="" defer="" type="4a512f9c9e521650ddf30ddd-text/javascript"></script><div class="hide" id="refresh"></div>
+<script type="4a512f9c9e521650ddf30ddd-text/javascript">setInterval(function(){$('#refresh').load('index.html/refresh.php');}, 300000);</script> <script src="js/rocket-loader.min.js" data-cf-settings="4a512f9c9e521650ddf30ddd-|49" defer=""></script>
+
+</body></html>
+<footer class="ns-footer">
+    <div class="ns-footer-cont">
+    <div class="container text-center">
+    <div class="ns-footer-text">
+    <div class="col-md-6 col-sm-6 col-xs-12 text-left">
+    </div>
+    <hr class="view-sm">
+    <div class="col-md-6 col-sm-6 col-xs-12 text-md-left text-left">
+    <div>©2024&nbsp;Express Service . All Rights Reserved.</div><div>Licensed Under: Express Service</div>
+    <hr class="view-sm">
+    <div class="clearfix"></div>
+    </div>
+    </div>
+    </div>
+    
+    </footer>
