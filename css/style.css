@@ -6153,9 +6153,9 @@ table#vehicle-list tr:last-child td:last-child {
 #faq {
     margin: 30px auto
 }
-.sm-icon.whatsapp a:hover {
+/* .sm-icon.whatsapp a:hover {
     background-color: #25d366
-}
+} */
 .sm-icon.facebook a:hover {
     background-color: #3b5999
 }
