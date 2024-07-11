@@ -70,11 +70,55 @@ form {
         padding: 8px 10px;
     }
 }
+.additional-section{
+    text-align: center;
+    background-color: #daefc8;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 65px;
+    position: relative;
+    padding: 3em 0;
+    background: url('../images/pexels-olly-3765113.jpg');
+    background-size: cover;
+    background-position: bottom left;
+    
+    
+    
+}
+.additional-section h1{
+    color: #fff
+}
+.button-heading{
+    text-align: center;
+    vertical-align: middle;
+    margin-bottom: 50px;
+}
 
+.call-to-action {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50px;
+    
+    transition: background-color 0.3s ease;
+}
+
+.call-to-action:hover {
+    background-color: #218838;
+}
+
+.call-to-action:active {
+    background-color: #1e7e34;
+}
 img {
     -moz-force-broken-image-icon: 1;
     min-height: 10px;
-    min-width: 10px
+    min-width: 10px;
+    
+
 }
 html {
     line-height: 1.15;

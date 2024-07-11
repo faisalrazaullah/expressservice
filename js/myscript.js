@@ -30,4 +30,5 @@ document.getElementById('bookingForm').addEventListener('submit', async function
         responseMessage.textContent = 'There was an error with your submission. Please try again.';
         responseMessage.style.color = '#dc3545';
     }
+    
 });

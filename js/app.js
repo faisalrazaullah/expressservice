@@ -630,4 +630,6 @@ if (window.location.pathname == "/tripinfo.php") {
       }
     });
   });
+
+  
 }
