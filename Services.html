@@ -24,6 +24,7 @@
     gtag('js', new Date());
     gtag('config', 'UA-177021614-1');
     </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     
     </head>
     <body>
@@ -40,8 +41,8 @@
     <div class="col-md-7 col-sm-7 col-xs-12">
     <div class="navbar-callus text-right sm-text-center">
         <ul class="list-inline">
-            <li><i class="fas fa-phone" style="color: #fff;"></i> <span style="color: #fff;">+44 772 361 0463</span></li> <li>
-                <a href=""><i class="fas fa-envelope"> <span class="info-email" style="cursor:none">info@express-service.com</span> </i></a>            
+            <li><i class="fas fa-phone" style="color: #fff; vertical-align: middle;"></i> <span style="color: #fff; vertical-align: middle;">+44 772 361 0463</span></li> <li>
+                <i class="fas fa-envelope"> <span class="info-email" style="color: #fff; padding-bottom: 20px; vertical-align: middle;">info@express-service.com</span> </i></a>            
             <!--<a href="/cdn-cgi/l/email-protection#2b42454d446b5f4a5342064742454e05484446"><i class="fas fa-envelope"></i> <span class="__cf_email__" data-cfemail="bbd2d5ddd4fbcfdac3d296d7d2d5de95d8d4d6">[email�&nbsp;protected]</span></a></li>--> </ul>
     </div>
     </div>
@@ -92,14 +93,14 @@
         .service-section h1::after{
             content: "";
             height: 5px;
-            width: 280px;
+            width: 730px;
             background-color: #2b9ec2;
             border-radius: 10px;
             display: block;
             margin: auto;
         }
         .info-email{
-            font-size: 15px;
+            font-size: 10px;
         }
         .cards-section{
             text-align: center;
@@ -113,7 +114,7 @@
             background-color: #5e5e5e;
             cursor: pointer;
         }
-        .cards-section>div:hover{
+        .service-section>div:hover{
             background-color: #8c8c8c;
             transition: 0.5s ease
         }
@@ -385,25 +386,80 @@
         text-align: center
     }
 }
+
+
+        .container {
+            padding: 5px;
+        }
+
+        .service-card {
+            background-color: #f9f9f9;
+            margin: 10px 0;
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .service-card .icon {
+            font-size: 2em;
+            margin-right: 20px;
+            color: #4CAF50;
+        }
+
+        .service-card h2 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        .service-card p {
+            margin: 5px 0 0;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .service-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .service-card .icon {
+                margin-bottom: 10px;
+            }
+        }
     </style>
     
     </header>
     <div class="service-section">
-        <h1>Our Services</h1>
-        <div class="cards-section">
-            <div>
-                <i class="fas fa-taxi"></i>
-                <h2>Taxi Services</h2>
-                <p>At Express Service, we offer a wide range of taxi services designed to meet all your transportation needs. Whether you’re commuting within the city, heading to the airport, or planning a long-distance journey, we've got you covered. Our professional drivers and well-maintained fleet ensure a comfortable, safe, and reliable ride every time.</p>
+        <h1>Our Taxi Services - Pet Friendly</h1>
+    </header>
+    <div class="container">
+        <div class="service-card">
+            <div class="icon">
+                <i class="fas fa-dog"></i>
             </div>
             <div>
-                <i class="fas fa-car"></i>
-                <h2>Airport Services</h2>
-                <p>Traveling can be stressful, but your journey to and from the airport doesn’t have to be. Our airport transfer service offers:
-
-                    Timely Pickups: We monitor flight schedules to ensure timely pickups and drop-offs.
-                    Meet and Greet: Our drivers will meet you at the arrivals, assist with your luggage, and ensure a smooth transition to your next destination.
-                    Comfortable Rides: Spacious vehicles to accommodate you and your luggage comfortably.</p>
+                <h2>Pet-Friendly Rides</h2>
+                <p>We offer comfortable rides for you and your furry friends. All our cars are pet-friendly, ensuring a safe and pleasant journey.</p>
+            </div>
+        </div>
+        <div class="service-card">
+            <div class="icon">
+                <i class="fas fa-cat"></i>
+            </div>
+            <div>
+                <h2>Cat Taxi Service</h2>
+                <p>Special arrangements for cats. Our drivers are trained to handle pets with care and attention.</p>
+            </div>
+        </div>
+        <div class="service-card">
+            <div class="icon">
+                <i class="fas fa-paw"></i>
+            </div>
+            <div>
+                <h2>Pet Boarding Assistance</h2>
+                <p>We can take your pets to their boarding facilities, ensuring they reach safely and comfortably.</p>
             </div>
         </div>
     </div>
